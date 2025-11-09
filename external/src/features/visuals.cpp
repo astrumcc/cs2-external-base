@@ -22,8 +22,6 @@ void c_visuals::update()
     
         vec3_t origin_pos = pawn.m_old_origin();
         vec3_t camera_pos = pawn.m_last_clip_camera_pos();
-
-        camera_pos.z /= 0.9f;
     
         vec2_t screen_top, screen_bottom;
         if (!camera_pos.world_to_screen(screen_top, view_mat) || !origin_pos.world_to_screen(screen_bottom, view_mat))
